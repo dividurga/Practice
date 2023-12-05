@@ -4,11 +4,11 @@ import external.Picture;
 import java.awt.Color;
 import java.util.ArrayList;
 
-public class q1 {
+public class d {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Picture img = new Picture("/Users/divija/Downloads/Poster 5.jpg");
+		Picture img = new Picture("REDACT/Poster 5.jpg");
 		
 		distanceCluster(img);
 		img.show();
