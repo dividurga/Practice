@@ -3,37 +3,7 @@ package homework9;
 import java.util.Iterator;
 
 public class Question4 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Deque<Integer> d1 = new Deque<>();
-		d1.pushLeft(20);
-		d1.pushLeft(30);
-		d1.pushLeft(40);
-		d1.pushLeft(50);
-		d1.pushRight(20);
-		d1.pushRight(30);
-		d1.pushRight(40);
-		d1.pushRight(50);
-		for (int a : d1) {
-			System.out.print(a+ " ");
-		}
-		System.out.println();
-		d1.popLeft();
-		for (int a : d1) {
-			System.out.print(a+ " ");
-		}
-		System.out.println();
-		d1.popRight();
-		for (int a : d1) {
-			System.out.print(a+ " ");
-		}
-		System.out.println();
-		// enhanced for loop implementation to test iterable
-		System.out.println(d1.size());
-		
-	}
-
+	//A class to implement a doubly-linked list Deque
 	public static class Deque<Item> implements Iterable<Item> {
 		private Node first;
 		private Node last;
@@ -125,4 +95,36 @@ public class Question4 {
 
 		}
 	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Deque<Integer> d1 = new Deque<>();
+		d1.pushLeft(20);
+		d1.pushLeft(30);
+		d1.pushLeft(40);
+		d1.pushLeft(50);
+		d1.pushRight(20);
+		d1.pushRight(30);
+		d1.pushRight(40);
+		d1.pushRight(50);
+		for (int a : d1) {
+			System.out.print(a+ " ");
+		}
+		System.out.println();
+		d1.popLeft();
+		for (int a : d1) {
+			System.out.print(a+ " ");
+		}
+		System.out.println();
+		d1.popRight();
+		for (int a : d1) {
+			System.out.print(a+ " ");
+		}
+		System.out.println();
+		// enhanced for loop implementation to test iterable
+		System.out.println(d1.size());
+		
+	}
+
+	
 }
