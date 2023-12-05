@@ -1,28 +1,6 @@
 package homework9;
-
+//A class that allows a user to handle complex numbers and perform basic mathematical operations on them
 public class Question3 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		complexNumber complex1 = new complexNumber();
-		complex1.setRealPart(3);
-		complex1.setImagPart(4);
-
-		complexNumber complex2 = new complexNumber();
-		complex2.setRealPart(7.4);
-		complex2.setImagPart(14.89);
-
-		// Testing all class methods
-		System.out.println("Complex Number 1: "+ complex1);
-		System.out.println("Checking for Equality: "+complex1.equals(complex2));
-		System.out.println("Addition: "+complex1.add(complex2));
-		System.out.println("Subtraction: "+complex1.subtract(complex2));
-		System.out.println("Multiplication: "+complex1.multiply(complex2));
-		System.out.println("Division: "+complex1.divide(complex2));
-		System.out.println("Absolute value of "+ complex1+" is " +complex1.abs());
-		System.out.println("Complex conjugate of "+complex1+"is "+complex1.complexConjugate());
-
-	}
 
 	public static class complexNumber {
 		private double realPart;
@@ -136,5 +114,29 @@ public class Question3 {
 		}
 
 	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		complexNumber complex1 = new complexNumber();
+		complex1.setRealPart(3);
+		complex1.setImagPart(4);
+
+		complexNumber complex2 = new complexNumber();
+		complex2.setRealPart(7.4);
+		complex2.setImagPart(14.89);
+
+		// Testing all class methods
+		System.out.println("Complex Number 1: "+ complex1);
+		System.out.println("Checking for Equality: "+complex1.equals(complex2));
+		System.out.println("Addition: "+complex1.add(complex2));
+		System.out.println("Subtraction: "+complex1.subtract(complex2));
+		System.out.println("Multiplication: "+complex1.multiply(complex2));
+		System.out.println("Division: "+complex1.divide(complex2));
+		System.out.println("Absolute value of "+ complex1+" is " +complex1.abs());
+		System.out.println("Complex conjugate of "+complex1+"is "+complex1.complexConjugate());
+
+	}
+
+	
 
 }
