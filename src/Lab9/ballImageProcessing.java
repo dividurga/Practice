@@ -46,6 +46,55 @@ public class d {
 		
 	}
 	}
+	public static int arrCluster(Picture img) {
+		int red=0;
+		int green=0;
+		int blue=0;
+		int countball=0;
+		int counter=0;
+		int countold=0;
+		int[] arrBall=new int[3];
+		ArrayList <int[]> arr= new ArrayList<int[]>();
+		for (int i=0; i<img.width(); i++) {
+			for (int j=0; j<img.height(); j++) {
+				red = img.get(i, j).getRed() + 1;
+				blue = img.get(i, j).getBlue() + 1;
+				green = img.get(i, j).getGreen() + 1;
+				if (80 < red && red / blue > 1.5 && red / green > 1.5) {
+				//if (blue / red > 1) {
+
+			//if(50 < green && green / red > 1.5){
+					
+					for (int[] elem: arr) {
+						if (Math.sqrt(Math.pow(elem[0]-i,2)+Math.pow(elem[1]-j,2))>100) {
+							counter++;
+						}
+						
+					}
+					System.out.println("ARR "+ arr.size()+" "+ counter+" "+ countball);
+					
+					
+					if (arr.size()==0) {
+						countball=0;
+					}
+					else if (counter>countold+300) {
+						countball++;
+					}
+					arr.add(new int[]{i,j});
+					countold=counter;
+					counter=0;
+				}
+				
+				
+				
+			}
+		}
+		if (countball==0) {
+			return 0;
+		}
+		return countball+1;
+		
+	}
 	/*
 
 	public static Picture showRedBall(Picture sourceImg) {
