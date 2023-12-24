@@ -4,7 +4,7 @@ import external.Picture;
 import java.awt.Color;
 import java.util.ArrayList;
 
-public class d {
+public class BallImageProcessing {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
